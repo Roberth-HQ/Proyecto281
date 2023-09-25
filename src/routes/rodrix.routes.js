@@ -1,0 +1,1 @@
+import authRoute from "./actividad.routes"

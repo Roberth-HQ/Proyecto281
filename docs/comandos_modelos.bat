@@ -1,0 +1,15 @@
+sequelize model:generate --name Usuario --attributes ci:string,nombre:string,fecha_nac:date,genero:string,direccion:string,correo:string,telefono:string,nombre_usuario:string,contrasenia:string
+sequelize model:generate --name Administrador --attributes id_usuario:integer,rol:string
+sequelize model:generate --name Usuario_normal --attributes estado:string,fecha_registro:date,id_administrador:integer
+sequelize model:generate --name Actividad --attributes nombre_actividad:string,tipo:string,descripcion:string,fecha_ini:date,fecha_fin:date,hora:date,id_administrador:integer
+sequelize model:generate --name Recurso --attributes titulo:string,tipo:string,descripcion:string,url:string,autor:string,contenido:string,visibilidad:boolean,id_administrador:integer
+sequelize model:generate --name Evaluacion --attributes titulo:string,nivel_de_riesgo:string,recomendaciones:string,id_usuario:integer
+sequelize model:generate --name Institucion_Ayuda --attributes nombre_institucion:string,telefono:string,descripcion:string,url:string,id_administrador:integer
+sequelize model:generate --name Denuncia --attributes nombre_victima:string,nombre_agresor:string,tipo_violencia:string,tipo_denuncia:string,fecha:date,descripcion:string,pruebas:string,ubicacion:string,estado:boolean,id_usuario:integer
+sequelize model:generate --name Contacto --attributes nombre_contacto:string,fecha_ac:date,telefono:string,id_usuario:integer
+sequelize model:generate --name Comentario --attributes fecha:date,descripcion:string,estado:boolean,id_administrador:integer,id_recurso:integer,id_usuario:integer
+sequelize model:generate --name Alerta --attributes fecha:date,hora:date,ubicacion:string,descripcion_incidente:string,id_usuario:integer
+sequelize model:generate --name Agrega --attributes id_usuario:integer,id_contacto:integer
+sequelize model:generate --name Asiste --attributes id_administrador:integer,id_denuncia:integer
+sequelize model:generate --name Recibe --attributes id_inst_ayuda:integer,id_alerta:integer
+sequelize model:generate --name Notifica --attributes id_contacto:integer,id_alerta:integer

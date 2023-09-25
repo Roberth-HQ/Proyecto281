@@ -1,0 +1,11 @@
+POST http://127.0.0.1:5432/api/usuario
+Content-Type: application/json
+
+{
+    "name": "rodrigo",
+    "edad": 24,
+    "lenguajes": ["c++", "java", "python"]
+}
+
+
+GET http://127.0.0.1:5432/api/usuario
